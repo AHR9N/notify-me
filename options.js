@@ -5,7 +5,7 @@ window.browser = (function () {
 })();
 
 var authorClick = function() {
-    browser.tabs.create({url: 'https://github.com/AHR9N'});
+    browser.tabs.create({url: 'https://www.facebook.com/AzharICPC'});
 };
 var githubClick = function() {
     browser.tabs.create({url: 'https://github.com/AHR9N/notify-me'});
