@@ -1,49 +1,49 @@
 {
-	// Required
-    "manifest_version": 3,
+    // Required
+    "manifest_version": 2,
     "name": "Notify Me!",
     "version": "1.0",
     
     // Recommended
-    "action": {...},
-    "default_locale": "en",
+    // "default_locale": "en",
     "description" : "Enough being busy, reloading the page, looking for comments/announcements while the contest is running. Relax, save your time and let this extension notify you!",
-    "icons": {
-        "16": "icon16.png",
-        "32": "icon32.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-    }, 
+    // "icons": {
+    //     "16": "icon16.png",
+    //     "32": "icon32.png",
+    //     "48": "icon48.png",
+    //     "128": "icon128.png"
+    // }, 
      
     // Optional
     "background": {
-        "scripts": ["script.js"],
+        "scripts": ["vjudge.js"],
         "persistent": true
     },
     "content_scripts": [
         {
           "matches": ["*://vjudge.net/*"],
           "run_at": "document_start",
-          "js": ["vjudge.js"]
+          "js": ["script.js"]
         }
     ],
     "browser_action": {
         "default_popup": "options.html",
-        "default_icon": {
-            "16": "icon16.png",
-            "32": "icon32.png",
-            "48": "icon48.png",
-            "128": "icon128.png"
-        }
+        // "default_icon": {
+        //     "16": "icon16.png",
+        //     "32": "icon32.png",
+        //     "48": "icon48.png",
+        //     "128": "icon128.png"
+        // },
+        "default_title": "Your easy way competing"
     },
     "options_ui": {
       "page": "options.html",
       "open_in_tab": false
     },
     "permissions": [
-		"storage",
-		"tabs",
-		"webRequest",
-		"*://vjudge.net/*",
-	]
+	"storage",
+	"tabs",
+	"webRequest",
+	"*://vjudge.net/*"
+    ]
 }
