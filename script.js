@@ -2,9 +2,10 @@ var CommentsIds = [], text;
 var authors = ["M0D4", "MuhammadJ", "ahmed_magdy1", "Redhwan", "AIC", "Abdeltwab"];
 
 function getJsonText(){
-    var idxRunning = window.document.body.innerText.indexOf("Running");
-    var idxElapsed = window.document.body.innerText.indexOf("Elapsed");
-    if(idxRunning - idxElapsed != 18) return;
+    var f1 = window.document.body.innerText.includes("Elapsed");
+    var f2 = window.document.body.innerText.includes("Running");
+    var f3 = window.document.body.innerText.includes("Remaining");
+    if(!f1 || !f2 || !f3) return;
 	
     text = "";
     var url = window.location.href;
