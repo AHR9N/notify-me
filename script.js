@@ -1,4 +1,5 @@
 var times = [];
+var jsonText, obj;
 
 function checkComment(){
  
@@ -37,6 +38,7 @@ var url = window.location.href;
           //console.log(request.responseText);
         alert(request.responseText);
           jsonText = request.responseText;
+          obj = JSON.parse(jsonText);
       }
     };
     
