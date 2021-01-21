@@ -1,4 +1,5 @@
 var CommentsIds = [], text;
+var authors = ["M0D4", "MuhammadJ", "ahmed_magdy1", "Redhwan", "AIC", "Abdeltwab"];
 
 function getJsonText(){
     text = "";
@@ -59,13 +60,9 @@ function getJsonText(){
 }
 
 function isAdmin(author){
-    var authors = ["M0D4", "MuhammadJ", "ahmed_magdy1", "Redhwan", "AIC", "Abdeltwab"];
-    for(var i = 0; i < authors.length; i++){
-        if(authors[i] == author)
-            return true;
-    }
-    return false;
+    return authors.indexOf(author) != -1;
 }
+
 function check(text){
     if(window.navigator.onLine){
         console.log("Online.\n"); 
@@ -82,6 +79,7 @@ function check(text){
             if(!isAdmin(posts[i]["author"])) continue;
             if(CommentsIds.indexOf(posts[i]["id"]) != -1) continue;
             if(posts[i]["content"] == undefined) continue;
+            if(posts[i]["parentId"] != 0) continue;
             CommentsIds.push(posts[i]["id"]);
             alert(posts[i]["content"]);
         }
