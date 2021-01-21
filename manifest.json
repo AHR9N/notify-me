@@ -6,7 +6,7 @@
     
     // Recommended
     // "default_locale": "en",
-    "description" : "Enough being busy, reloading the page, looking for comments/announcements while the contest is running. Relax, save your time and let this extension notify you!",
+    "description" : "Enough being busy looking for comments/announcements while the contest is running. Relax and let this extension notify you!",
     // "icons": {
     //     "16": "icon16.png",
     //     "32": "icon32.png",
@@ -34,7 +34,7 @@
         //     "48": "icon48.png",
         //     "128": "icon128.png"
         // },
-        "default_title": "Your easy way competing"
+        "default_title": "Notify Me!"
     },
     "options_ui": {
       "page": "options.html",
