@@ -1,4 +1,4 @@
-var text, commentsIds = [], hasOld = 0;
+var text, commentsIds = [], hasOldComments = 0;
 var managers = ["M0D4", "MuhammadJ", "ahmed_magdy1", "Redhwan", "AIC", "Abdeltwab"];
 
 function getJsonText(){
@@ -55,8 +55,8 @@ function getJsonText(){
     request.onreadystatechange = function() {
       if (request.readyState == 4){
             var x = request.responseText;
-            if(!hasOld) getOldComments(x);
-            else check(x);
+            if(!hasOldComments) getOldComments(x);
+            else checkForNewComments(x);
       }
     };
     text = request.responseText;
@@ -66,7 +66,7 @@ function isAdmin(author){
     return managers.indexOf(author) != -1;
 }
 
-function check(text){
+function checkForNewComments(text){
     if(window.navigator.onLine){
         if(text.length == 0) return;
         var obj = JSON.parse(text);
@@ -84,7 +84,7 @@ function check(text){
 }
 
 function getOldComments(text){
-    hasOld = 1;
+    hasOldComments = 1;
     if(window.navigator.onLine){
         if(text.length == 0) return;
         var obj = JSON.parse(text);
