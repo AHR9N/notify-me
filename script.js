@@ -1,5 +1,5 @@
-var CommentsIds = [], text;
-var authors = ["M0D4", "MuhammadJ", "ahmed_magdy1", "Redhwan", "AIC", "Abdeltwab"];
+var text;
+var managers = ["M0D4", "MuhammadJ", "ahmed_magdy1", "Redhwan", "AIC", "Abdeltwab"];
 
 function getJsonText(){
     var f1 = window.document.body.innerText.includes("Elapsed");
@@ -65,27 +65,21 @@ function getJsonText(){
 }
 
 function isAdmin(author){
-    return authors.indexOf(author) != -1;
+    return managers.indexOf(author) != -1;
 }
 
 function check(text){
     if(window.navigator.onLine){
-        //console.log("Online.\n"); 
-        //console.log("text: " + text);
         if(text.length == 0) return;
-        //alert(text);
         var obj = JSON.parse(text);
-        //console.log(obj["id"]);
         if(obj["id"] == 0) return; //no comments
-        //console.log("phase 2");
         var posts = obj["posts"];
         for(var i = 0; i < posts.length; i++){
-            //console.log(isAdmin(posts[i]["author"]));
             if(!isAdmin(posts[i]["author"])) continue;
-            if(CommentsIds.indexOf(posts[i]["id"]) != -1) continue;
             if(posts[i]["content"] == undefined) continue;
             if(posts[i]["parentId"] != 0) continue;
-            CommentsIds.push(posts[i]["id"]);
+            if(localStorage.getItem(posts[i]["id"]) != null) continue;
+            localStorage.setItem(posts[i]["id"], posts[i]["id"]);
             alert(posts[i]["content"]);
         }
     }
