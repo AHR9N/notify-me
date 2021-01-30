@@ -1,12 +1,9 @@
 {
-    // Required
     "manifest_version": 2,
     "name": "Notify Me!",
     "version": "1.0",
     
-    // Recommended
-    // "default_locale": "en",
-    "description" : "Enough being busy looking for comments/announcements while the contest is running. Relax and let this extension notify you!",
+    "description" : "A web browser extension which notifies contestants when there are announcements on VJudge.net running contests, instead of wasting time reloading pages and looking for them periodically.",
     // "icons": {
     //     "16": "icon16.png",
     //     "32": "icon32.png",
@@ -14,7 +11,6 @@
     //     "128": "icon128.png"
     // }, 
      
-    // Optional
     "background": {
         "scripts": ["vjudge.js"],
         "persistent": true
