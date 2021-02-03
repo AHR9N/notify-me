@@ -8,19 +8,8 @@ Relax and let this extension notify you as soon as possible in pop-up messages.
 
 ## Installation
 
-1. Download files/codes from this repository.
-2. Create a folder in your PC, and put all those files in that folder.
-
-<details>
-  <summary>For Google Chrome</summary><p></p>
-  <p>3. Go to chrome://extensions/ and tick on "Developer mode".</p>
-  <p>4. Click on "Load unpacked" and select the folder that you've just made.</p>
-</details>
-
-<details>
-  <summary>For Firefox</summary><p></p>
-  <p>3. Go to about:debugging#/runtime/this-firefox and click on "Load Temporary Add-on...".</p>
-  <p>4. Select "manifest.json" file from the folder that you've just made and click "Open".</p>
-</details>
-
-5. Now, load your running contest page on [VJudge](https://vjudge.net/), and it is working!
+* Download files/codes from this repository.
+* Create a folder in your PC, and put all those files in that folder.
+* For Google Chrome, go to chrome://extensions/ and tick on "Developer mode".</p>
+* Click on "Load unpacked" and select the folder that you've just made.
+* Now, load your running contest page on [VJudge](https://vjudge.net/), and it is working!
