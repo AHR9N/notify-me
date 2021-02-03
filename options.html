@@ -22,13 +22,23 @@
 	    margin: 5px auto;
 	    text-align: center;
 	}
+	.watermark {
+	    bottom: 2px;
+	    right: 85px;
+	    opacity: 0.5;
+    	    color: black;
+	    position: absolute;
+	    content: "COPYRIGHT"; 
+	    cursor: default;
+	    pointer-events: none;
+	}
     </style>
     <body>
 	<div>
 	    <p class="info">Hello, fighter!</p>
+	    <img class="watermark" height="85" width="85" src="LOGO1.png">
 	    <p class="wrapper">Notifications are ready, are you?</p>
 	    <p>By: <a id="author" href="#">Al-Azhar ICPC Community</a> &middot; <a id="github" href="#">Source code</a></p>
 	</div>
 	<script src="options.js"></script>
-    </body>
 </html>
