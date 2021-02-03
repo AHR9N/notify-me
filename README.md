@@ -10,6 +10,6 @@ Relax and let this extension notify you as soon as possible in pop-up messages.
 
 * Download files/codes from this repository.
 * Create a folder in your PC, and put all those files in that folder.
-* For Google Chrome, go to chrome://extensions/ and tick on "Developer mode".</p>
+* For Google Chrome, go to chrome://extensions/ and tick on "Developer mode".
 * Click on "Load unpacked" and select the folder that you've just made.
 * Now, load your running contest page on [VJudge](https://vjudge.net/), and it is working!
