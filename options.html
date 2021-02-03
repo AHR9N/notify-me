@@ -8,39 +8,44 @@
     </head>
     <style>
 	.info {
-	    font-size: 25px;
+	    font-size: 22px;
 	    color: green;
-	    text-align: center;
+	    text-align: right;
+	    width: 240px;
 	}
 	.wrapper {
-            font-size: 15px;
+        font-size: 13px;
 	    width: 290px;
-	    font-weight: bold;
+	    text-align: right;
 	}
 	p {
-	    font-size: 10px;
+	    font-size: 9px;
 	    clear: both;
-	    width: 240px;
+	    width: 220px;
 	    margin: 5px auto;
-	    text-align: center;
+	    text-align: right;
 	}
 	.watermark {
 	    bottom: 2px;
-	    right: 110px;
-	    opacity: 0.4;
-    	    color: black;
-	    position: absolute;
+	    right: 215px;
+	    opacity: 1;
+	    position: fixed;
 	    content: "COPYRIGHT"; 
-	    cursor: default;
 	    pointer-events: none;
+	    text-align: left;
+	}
+	.not {
+        font-size: 9px;
+	    width: 275px;
+	    text-align: right;
 	}
     </style>
     <body>
 	<div>
 	    <p class="info">Hello, fighter!</p>
-	    <img class="watermark" height="85" width="85" src="LOGO1.png">
+   	    <img class="watermark" height="80" width="90" src="LOGO1.png">
 	    <p class="wrapper">Notifications are ready, are you?</p>
-	    <p>By: <a id="author" href="#">Al-Azhar ICPC Community</a> &middot; <a id="github" href="#">Source code</a></p>
+	    <p class="not">By: <a id="author" href="#">Al-Azhar ICPC Community</a> &middot; <a id="github" href="#">Source code</a></p>
 	</div>
 	<script src="options.js"></script>
     </body>
