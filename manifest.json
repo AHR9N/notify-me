@@ -4,12 +4,12 @@
     "version": "1.0",
     
     "description" : "A web browser extension which notifies contestants when there are announcements on VJudge.net running contests, instead of wasting time reloading pages and looking for them periodically.",
-    // "icons": {
-    //     "16": "icon16.png",
-    //     "32": "icon32.png",
-    //     "48": "icon48.png",
-    //     "128": "icon128.png"
-    // }, 
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }, 
      
     "background": {
         "scripts": ["vjudge.js"],
@@ -24,12 +24,12 @@
     ],
     "browser_action": {
         "default_popup": "options.html",
-        // "default_icon": {
-        //     "16": "icon16.png",
-        //     "32": "icon32.png",
-        //     "48": "icon48.png",
-        //     "128": "icon128.png"
-        // },
+        "default_icon": {
+            "16": "icon.png",
+            "32": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        },
         "default_title": "Notify Me!"
     },
     "options_ui": {
